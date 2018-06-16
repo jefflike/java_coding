@@ -12,5 +12,10 @@ class exchange{
         String str = "abc";
         String str1 = str + myInt;
         System.out.println(str1);
+		
+        System.out.println(0x1000);// 4096
+        System.out.println(0b1000);// 8
+		
+		
 	}
 }

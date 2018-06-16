@@ -38,7 +38,7 @@ class Season{
 
 //enum enumTest extends Enum{//不能继承最高的父类
 enum enumTest {
-    SPRING(Season.SPRING),//调用有参构造器
+    SPRING(Season.SUMMER),//调用有参构造器
     SUMMER,//调用的无参构造器
     FALL;
     private Season seson;

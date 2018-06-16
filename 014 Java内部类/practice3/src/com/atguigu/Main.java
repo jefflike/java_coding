@@ -3,6 +3,8 @@ package com.atguigu;
 public class Main {
 
     public static void main(String[] args) {
+        Outer o = new Outer();
+        o.test();
         //A：使用Inner类型不可以
 //		Outer.Inner//错误的，没有这个字节码文件的生成
 
@@ -15,6 +17,7 @@ public class Main {
 class Outer{
     private String outField;
     private static String outStaticField;
+    private  int a = 20;
 
     public void test(){
         int a = 10;//局部变量
@@ -29,9 +32,9 @@ class Outer{
 
             public void testIn(){
                 // 1. 有名字的局部内部类调用外部类的属性与方法
-                System.out.println("outField = " + outField);
-                System.out.println("outStaticField = " + outStaticField);
-                System.out.println("a = " + a);//使用外部类的局部变量
+                System.out.println("outField = " + outField);// outField = null
+                System.out.println("outStaticField = " + outStaticField); //outStaticField = null
+                System.out.println("a = " + a);//使用外部类的局部变量 // a = 10
             }
         }
 
